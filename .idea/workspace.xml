@@ -9,14 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3fc9a70-95a9-4777-99d8-50a099de7095" name="Default Changelist" comment="测试">
-      <change afterPath="$PROJECT_DIR$/untitled/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/untitled/src/main/java/helloword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/untitled/target/classes/helloword.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="b3fc9a70-95a9-4777-99d8-50a099de7095" name="Default Changelist" comment="第二次提交">
+      <change beforePath="$PROJECT_DIR$/untitled/src/main/java/helloword.java" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/src/main/java/helloword.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -755,8 +749,16 @@
       <workItem from="1657073880605" duration="13000" />
       <workItem from="1657163736727" duration="297000" />
       <workItem from="1657175268457" duration="739000" />
-      <workItem from="1657183309607" duration="2963000" />
+      <workItem from="1657183309607" duration="3413000" />
     </task>
+    <task id="LOCAL-00001" summary="第二次提交">
+      <created>1657186321225</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657186321225</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -834,7 +836,8 @@
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
     <MESSAGE value="测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试" />
+    <MESSAGE value="第二次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第二次提交" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
