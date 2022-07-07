@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--创建一个时间对象-->
+    <bean id="birthday" class="java.util.Date"></bean>
+    <bean id="date01" class="java.util.Date"></bean>
+    <bean id="date02" class="java.util.Date"></bean>
+    <bean id="date03" class="java.util.Date"></bean>
+    <bean id="date04" class="java.util.Date"></bean>
+
+    <bean id="student01" class="com.op.ssm.di.Student01">
+        <property name="id" value="1">
+        </property>
+        <property name="name" value="cjogng01">
+        </property>
+        <property name="birthday" ref="birthday"></property>
+    </bean>
+
+    <bean id="student02" class="com.op.ssm.di.Student01">
+        <property name="id" value="1">
+        </property>
+        <property name="name">
+            <null></null>
+        </property>
+    </bean>
+
+    <bean id="student03" class="com.op.ssm.di.Student01">
+        <property name="id" value="1">
+        </property>
+        <property name="name" value="">
+        </property>
+    </bean>
+    <bean id="student04" class="com.op.ssm.di.Student01">
+        <property name="properties">
+            <props>
+                <prop key="key01">value01</prop>
+                <prop key="key02">value02</prop>
+                <prop key="key03">value03</prop>
+                <prop key="key04">value04</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="student05" class="com.op.ssm.di.Student01">
+        <property name="intArray">
+            <list>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+                <value>4</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="student06" class="com.op.ssm.di.Student01">
+        <property name="dateList">
+            <list>
+                <ref bean="date01"></ref>
+                <ref bean="date02"></ref>
+                <ref bean="date03"></ref>
+                <ref bean="date04"></ref>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="student07" class="com.op.ssm.di.Student01">
+        <property name="strSet">
+            <set>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+                <value>4</value>
+            </set>
+        </property>
+    </bean>
+
+    <bean id="student08" class="com.op.ssm.di.Student01">
+        <property name="strMap">
+            <map>
+                <entry key="key01" value="value01"></entry>
+                <entry key="key02" value="value02"></entry>
+                <entry key="key03" value="value03"></entry>
+                <entry key="key04" value="value04"></entry>
+            </map>
+        </property>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.op.ssm.mybatis.mapper.GradesMapper">
+
+<!--    <resultMap id="selectTable_resultmap" type="grades">-->
+<!--        <id property="grades_id" column="grades_id"></id>-->
+<!--        <result property="grades_name" column="grades_name"></result>-->
+<!--        &lt;!&ndash;一对多关系用集合collection&ndash;&gt;-->
+<!--        <collection property="studentList" ofType="student">-->
+<!--            <result column="student_name" property="student_name"></result>-->
+<!--        </collection>-->
+<!--    </resultMap>-->
+
+<!--    <select id="selectTable" parameterType="int" resultMap="selectTable_resultmap">-->
+<!--        SELECT `t_grades`.`grades_id`, `t_grades`.`grades_name`, `t_student`.`student_name`-->
+<!--        FROM `t_student`-->
+<!--                 RIGHT JOIN `t_grades` ON (`t_grades`.`grades_id` = `t_student`.`grades_id`)-->
+<!--        WHERE `t_grades`.`grades_id` = #{value};-->
+<!--    </select>-->
+
+    <resultMap id="selectTable_resultmap" type="grades">
+        <id property="grades_id" column="grades_id"></id>
+        <result property="grades_name" column="grades_name"></result>
+        <!--一对多关系用集合collection-->
+        <collection property="studentList" ofType="student" resultMap="StudentResultMap">
+
+        </collection>
+    </resultMap>
+
+    <resultMap id="StudentResultMap" type="student">
+        <result column="student_name" property="student_name"></result>
+    </resultMap>
+
+    <select id="selectTable" parameterType="int" resultMap="selectTable_resultmap">
+        SELECT `t_grades`.`grades_id`, `t_grades`.`grades_name`, `t_student`.`student_name`
+        FROM `t_student`
+                 RIGHT JOIN `t_grades` ON (`t_grades`.`grades_id` = `t_student`.`grades_id`)
+        WHERE `t_grades`.`grades_id` = #{value};
+    </select>
+
+</mapper>

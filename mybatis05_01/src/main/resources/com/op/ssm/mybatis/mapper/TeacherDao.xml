@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.op.ssm.mybatis.mapper.TeacherDao">
+
+    <insert id="insertTable" parameterType="com.op.ssm.mybatis.pojo.Teacher">
+        INSERT INTO `t_teacher` VALUES(NULL,#{teacher_name},#{teacher_age});
+    </insert>
+    <!--
+    useGeneratedKeys: 设置主键是自动增长，由数据库服务器端来管理
+    keyProperty：插入成功一条记录后，该记录的主键值保存到入参的teacher_id属性里
+    -->
+    <insert id="insertTable01" parameterType="com.op.ssm.mybatis.pojo.Teacher" useGeneratedKeys="true" keyProperty="teacher_id">
+        INSERT INTO `t_teacher` VALUES(NULL,#{teacher_name},#{teacher_age});
+    </insert>
+    <!--
+    order:表示selectKey关联sql的执行顺序
+    keyProperty：表示electKey关联sql执行结果保存到入参的那个属性里
+    -->
+    <insert id="insertTable02" parameterType="com.op.ssm.mybatis.pojo.Teacher">
+        <selectKey keyProperty="teacher_id" resultType="int" order="AFTER">
+            SELECT LAST_INSERT_ID() AS id;
+        </selectKey>
+        INSERT INTO `t_teacher` VALUES(NULL,#{teacher_name},#{teacher_age});
+    </insert>
+    <insert id="insertTable03">
+        INSERT INTO `t_teacher` VALUES
+                <foreach collection="array" item="element" separator=",">
+                    (NULL,#{element.teacher_name},#{element.teacher_age})
+                </foreach>
+                ;
+    </insert>
+    <insert id="insertTable04">
+        <foreach collection="array" item="element">
+            INSERT INTO `t_teacher` VALUES(NULL,#{element.teacher_name},#{element.teacher_age});
+        </foreach>
+
+    </insert>
+    <update id="updateTable01" parameterType="com.op.ssm.mybatis.pojo.Teacher">
+        UPDATE `t_teacher` SET `t_teacher`.`teacher_name`=#{teacher_name},`t_teacher`.`teacher_age`=#{teacher_age} WHERE `t_teacher`.`teacher_id`=#{teacher_id};
+    </update>
+    <delete id="deleleTable01" parameterType="int">
+        DELETE FROM `t_teacher` WHERE `t_teacher`.`teacher_id`=#{value};
+    </delete>
+    <delete id="deleteTable02">
+        TRUNCATE TABLE `t_teacher`;
+    </delete>
+    <select id="selecttable01" parameterType="int"  resultType="com.op.ssm.mybatis.pojo.Teacher">
+        SELECT  `t_teacher`.`teacher_id`,`t_teacher`.`teacher_name`,`t_teacher`.`teacher_age`
+        FROM `t_teacher`
+        WHERE `t_teacher`.`teacher_id`=#{value};
+    </select>
+    <select id="selectTable02" resultType="abc">
+        SELECT  `t_teacher`.`teacher_id`,`t_teacher`.`teacher_name`,`t_teacher`.`teacher_age`
+        FROM `t_teacher`
+    </select>
+</mapper>

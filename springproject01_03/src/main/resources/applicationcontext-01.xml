@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd
+    http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="studentDao" class="com.op.ssm.iocdi.dao.StudentDaoImp"></bean>
+    <bean id="studentService" class="com.op.ssm.iocdi.service.StudentServiceImp">
+        <property name="studentDao" ref="studentDao"></property>
+    </bean>
+
+    <bean id="performanceOptimization" class="com.op.ssm.iocdi.util.PerformanceOptimization"></bean>
+
+    <aop:config>
+        <aop:aspect id="myAspect" ref="performanceOptimization" >
+            <aop:pointcut id="businessService" expression="execution(* com.op.ssm.iocdi.service.StudentServiceImp.*(..))"/>
+            <aop:before method="start" pointcut-ref="businessService"></aop:before>
+            <aop:after method="end" pointcut-ref="businessService"></aop:after>
+
+
+
+        </aop:aspect>
+    </aop:config>
+
+
+
+
+</beans>

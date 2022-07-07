@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.op.ssm.mybatis.mapper.TeacherDao">
+    <!--重复的sql语句提取出来   用的时候用<include>引用-->
+    <sql id="select_sql_01">
+        SELECT `t_teacher`.`teacher_id`, `t_teacher`.`teacher_name`, `t_teacher`.`teacher_age`
+        FROM `t_teacher`
+    </sql>
+
+    <select id="selectTable02" resultType="abc">
+        <include refid="select_sql_01"/>
+    </select>
+
+    <select id="selectTable01" parameterType="int" resultType="com.op.ssm.mybatis.pojo.Teacher">
+        <include refid="select_sql_01"/>
+        WHERE `t_teacher`.`teacher_id`=#{value};
+    </select>
+
+    <select id="selectTable03" parameterType="abc" resultType="com.op.ssm.mybatis.pojo.Teacher">
+        <include refid="select_sql_01"/>
+        WHERE `t_teacher`.`teacher_id`=#{teacher_id};
+    </select>
+    <select id="selectTable04" parameterType="java.util.Map" resultType="com.op.ssm.mybatis.pojo.Teacher">
+        <include refid="select_sql_01"/>
+        <where>
+            <if test="teacher_id!=null and teacher_id!=0">
+                AND `t_teacher`.`teacher_id`= #{teacher_id}
+            </if>
+            <if test="teacher_age!=null and teacher_age!=0">
+                AND `t_teacher`.`teacher_age`=#{teacher_age};
+            </if>
+        </where>
+    </select>
+
+    <select id="selectTable05" resultType="com.op.ssm.mybatis.pojo.Teacher">
+        <!--  SELECT `t_teacher`.`teacher_id`,`t_teacher`.`teacher_age`,`t_teacher`.`teacher_name`
+          FROM `t_teacher`
+          WHERE `t_teacher`.`teacher_id` IN (
+          <foreach collection="array" item="element" separator=",">
+              ${element}
+          </foreach>
+          );-->
+
+        <!--SELECT `t_teacher`.`teacher_id`,`t_teacher`.`teacher_age`,`t_teacher`.`teacher_name`
+        FROM `t_teacher`
+        WHERE `t_teacher`.`teacher_id` IN
+        <foreach collection="array" item="element" separator="," open="(" close=");" >
+            ${element}
+        </foreach>-->
+
+        SELECT `t_teacher`.`teacher_id`,`t_teacher`.`teacher_age`,`t_teacher`.`teacher_name`
+        FROM `t_teacher`
+        WHERE `t_teacher`.`teacher_id` IN
+        <foreach collection="array" item="element" separator="," open="(" close=");" index="index_01">
+            ${element+index_01}
+        </foreach>
+    </select>
+
+    <insert id="insertTable01">/*separator分隔符*/
+        <foreach collection="array" item="element" separator=";">
+            INSERT INTO`t_teacher` VALUES(NULL,#{element},NULL)
+        </foreach>
+    </insert>
+
+    <insert id="insertTable02" parameterType="java.util.List">
+        <foreach collection="list" item="element">
+            INSERT INTO`t_teacher` VALUES(NULL,#{element},NULL);
+        </foreach>
+    </insert>
+
+    <insert id="insertTable03" parameterType="java.util.List">
+        <foreach collection="list" item="element">
+            INSERT INTO`t_teacher` VALUES(NULL,#{element.teacher_name},#{element.teacher_age});
+        </foreach>
+    </insert>
+
+    <update id="updateTable01" parameterType="abc">
+        UPDATE `t_teacher`
+        <set>
+            <if test="teacher_name!=null and teacher_name!=''">
+                `t_teacher`.`teacher_name`=#{teacher_name},
+            </if>
+            <if test="teacher_age!=0 and teacher_age!=null">
+                `t_teacher`.`teacher_age`=#{teacher_age},
+            </if>
+        </set>
+        WHERE `t_teacher`.`teacher_id` = #{teacher_id};
+
+    </update>
+
+</mapper>

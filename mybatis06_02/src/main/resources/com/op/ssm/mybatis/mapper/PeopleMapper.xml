@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.op.ssm.mybatis.mapper.PeopleMapper">
+    <!--    <resultMap id="selectTable01_resultmap" type="people">
+            <id property="people_id" column="people_id"></id>
+            <result property="people_name" column="people_name"></result>
+            &lt;!&ndash;一对一关系&ndash;&gt;
+            <association property="idCard" javaType="idCard">
+                <result property="idcard_num" column="idcard_num"></result>
+            </association>
+        </resultMap>
+
+        <select id="selectTable01" parameterType="int" resultMap="selectTable01_resultmap">
+            SELECT `t_people`.`people_id`, `t_people`.`people_name`, `t_idcard`.`idcard_num`
+            FROM `t_people`,
+                 `t_idcard`
+            WHERE `t_people`.`idcard_id` = `t_idcard`.`idcard_id`
+              AND `t_people`.`idcard_id` = #{value};
+        </select>-->
+
+    <resultMap id="selectTable01_resultmap" type="people">
+        <id property="people_id" column="people_id"></id>
+        <result property="people_name" column="people_name"></result>
+        <association property="idCard" javaType="idCard"  select="selectidcard" column="idcard_id">
+        </association>
+    </resultMap>
+
+    <select id="selectTable01" parameterType="int" resultMap="selectTable01_resultmap">
+        SELECT `t_people`.`people_id`,
+               `t_people`.`people_name`,
+               `t_people`.`idcard_id`
+        FROM `t_people`
+        WHERE `t_people`.`people_id` = #{value};
+    </select>
+
+    <select id="selectidcard" parameterType="int" resultType="idCard">
+        SELECT `t_idcard`.`idcard_num`
+        FROM `t_idcard`
+        WHERE `t_idcard`.`idcard_id`=#{value};
+    </select>
+
+</mapper>

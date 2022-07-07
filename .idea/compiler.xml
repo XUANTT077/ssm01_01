@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springproject01_03" />
+        <module name="springproject01_02" />
+        <module name="spring01_02" />
+        <module name="springmvc07_03" />
+        <module name="spring01_01" />
+        <module name="springmvc07_04" />
+        <module name="springproject01_01" />
+        <module name="spring04_01" />
+        <module name="spring04_02" />
+        <module name="mybatis06_02" />
+        <module name="springmvc07_05" />
+        <module name="mybatis04_03" />
+        <module name="mybatis06_01" />
+        <module name="spring02_02" />
+        <module name="spring02_01" />
+        <module name="springmvc08" />
+        <module name="spring03_01" />
+        <module name="mybatis05_02" />
+        <module name="spring03_02" />
+        <module name="mybatis05_01" />
+        <module name="spring03_03" />
+        <module name="spring03_04" />
+        <module name="spring03_05" />
+        <module name="mybatis07_01" />
+        <module name="mybatis07_02" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="DengLu" target="1.8" />
+      <module name="Mybatis04_03" target="8" />
+      <module name="springmvc08_01" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

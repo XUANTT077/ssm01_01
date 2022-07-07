@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--关于 配置文件的整体配置-->
+    <settings>
+        <!--配置日志-->
+        <setting name="logImpl" value="LOG4J2"/>
+        <!--开启懒加载-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!--是否急切加载：只要需要获取对象的一个属性，就会获取身份证的信息-->
+        <setting name="aggressiveLazyLoading" value="true"/>
+    </settings>
+    <!--类型别名-->
+    <typeAliases>
+        <package name="com.op.ssm.mybatis.pojo"/>
+    </typeAliases>
+
+    <plugins>
+        <!-- com.github.pagehelper为PageHelper类所在包名 -->
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+        </plugin>
+    </plugins>
+
+
+</configuration>

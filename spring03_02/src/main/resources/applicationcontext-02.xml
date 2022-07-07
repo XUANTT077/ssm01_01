@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!--目标类小明-->
+    <bean id="xiaoMing" class="com.op.ssm.aop03.XiaoMing"></bean>
+    <!--切面类小五-->
+    <bean id="xiaoWu" class="com.op.ssm.aop03.XiaoWu"></bean>
+    <!--aop配置-->
+    <aop:config>
+        <!--定义了切面-->
+        <aop:aspect id="myAspect" ref="xiaoWu">
+            <!--定义切入点-->
+            <aop:pointcut id="businessService"
+                          expression="execution(* com.op.ssm.aop03.XiaoMing.yaoZhang(..))"/>
+
+            <aop:before method="befor" pointcut-ref="businessService"/>
+            <aop:after method="after" pointcut-ref="businessService"/>
+        </aop:aspect>
+    </aop:config>
+</beans>

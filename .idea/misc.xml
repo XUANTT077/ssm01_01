@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/DengLu" />
+    <file type="web" url="file://$PROJECT_DIR$/spring01_02" />
+    <file type="web" url="file://$PROJECT_DIR$/spring04_01" />
+    <file type="web" url="file://$PROJECT_DIR$/spring04_02" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc07_03" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc07_04" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc07_05" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc08" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc08_01" />
+    <file type="web" url="file://$PROJECT_DIR$/springproject01_01" />
+    <file type="web" url="file://$PROJECT_DIR$/springproject01_02" />
+    <file type="web" url="file://$PROJECT_DIR$/springproject01_03" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/spring02_02/pom.xml" />
+        <option value="$PROJECT_DIR$/springproject01_02/pom.xml" />
+        <option value="$PROJECT_DIR$/spring03_03/pom.xml" />
+        <option value="$PROJECT_DIR$/spring03_04/pom.xml" />
+        <option value="$PROJECT_DIR$/spring03_05/pom.xml" />
+        <option value="$PROJECT_DIR$/springproject01_03/pom.xml" />
+        <option value="$PROJECT_DIR$/spring04_01/pom.xml" />
+        <option value="$PROJECT_DIR$/spring04_02/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis05_01/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis05_02/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis06_01/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis06_02/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis07_01/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis07_02/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc07_04/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc07_05/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc08/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/DengLu/pom.xml" />
+        <option value="$PROJECT_DIR$/Mybatis04_03/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.op.ssm.mybatis.mapper.StudentDao">
+
+    <insert id="insertTable01" parameterType="com.op.ssm.mybatis.pojo.Student">
+        INSERT INTO `t_student01` VALUES(#{student_id},#{student_name},#{student_age});
+    </insert>
+
+    <insert id="insertTable02"  parameterType="com.op.ssm.mybatis.pojo.Student">
+        <selectKey keyProperty="student_id" resultType="java.lang.String" order="BEFORE">
+            SELECT  UUID() AS id;
+        </selectKey>
+        INSERT INTO `t_student01` VALUES(#{student_id},#{student_name},#{student_age});
+    </insert>
+</mapper>

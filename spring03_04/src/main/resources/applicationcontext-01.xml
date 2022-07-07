@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="movie" class="com.op.ssm.aop01.Movie">
+        <property name="state" value="-2"></property>
+    </bean>
+    <bean id="viewer" class="com.op.ssm.aop01.Viewer"></bean>
+    <aop:config>
+        <!--定义了切面-->
+        <aop:aspect id="myAspect" ref="viewer">
+            <!--定义切入点-->
+            <aop:pointcut id="businessService"
+                          expression="execution(* com.op.ssm.aop01.Movie.filmRelease(..))"/>
+
+            <aop:before method="before" pointcut-ref="businessService"></aop:before>
+            <aop:after-returning method="afterReturningAdvice" pointcut-ref="businessService"></aop:after-returning>
+            <aop:after method="afterFinallyAdvice" pointcut-ref="businessService"></aop:after>
+            <aop:after-throwing method="throwAdvice" pointcut-ref="businessService"
+                                throwing="exception"></aop:after-throwing>
+
+
+        </aop:aspect>
+    </aop:config>
+
+
+
+</beans>

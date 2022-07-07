@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--构造注入-->
+    <bean id="student01" class="com.op.ssm.di.Student01">
+        <constructor-arg index="0" value="1"></constructor-arg>
+        <constructor-arg index="1" value="cjgong01"></constructor-arg>
+        <constructor-arg index="2" value="1"></constructor-arg>
+    </bean>
+
+    <bean id="student01_02" class="com.op.ssm.di.Student01">
+        <constructor-arg type="java.lang.String" value="cjgong03"></constructor-arg>
+        <constructor-arg type="int" value="3"></constructor-arg>
+    </bean>
+    <bean id="student01_03" class="com.op.ssm.di.Student01">
+        <constructor-arg type="java.lang.String" value="m"></constructor-arg>
+        <constructor-arg type="java.lang.String" value="cjgong03"></constructor-arg>
+
+        <constructor-arg type="int" value="4"></constructor-arg>
+        <constructor-arg type="int" value="3"></constructor-arg>
+    </bean>
+    <!--
+    set注入
+    步骤1：先通过无参构造函数创建对象
+    步骤2：通过该对象调用setXXXX对成员变量赋值
+    -->
+    <bean id="student02" class="com.op.ssm.di.Student02">
+        <property name="abc" value="2"></property>
+        <property name="name" value="cjgong02"></property>
+        <property name="age" value="2"></property>
+    </bean>
+
+
+</beans>

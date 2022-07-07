@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/tx
+        https://www.springframework.org/schema/tx/spring-tx.xsd
+                http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--关于数据源的配置-->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="${jdbc.driverClassName}"/>
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <bean id="studentDao" class="com.op.ssm.iocdi.dao.StudentDaoImp">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+    <bean id="studentService" class="com.op.ssm.iocdi.service.StudentServiceImp">
+        <property name="studentDao" ref="studentDao"></property>
+    </bean>
+
+    <!--添加事务管理器-->
+    <!-- similarly, don't forget the TransactionManager -->
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--配置事务管理器属性-->
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <!-- the transactional semantics... -->
+        <tx:attributes>
+            <!--
+            需要在同一个事务
+            -->
+            <tx:method name="transfer*" propagation="REQUIRED"/>
+            <!--
+            不需要事务的设置
+            -->
+            <tx:method name="*" propagation="SUPPORTS" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!--
+    在切入点方法开始执行时，开启一个事务
+    在切入点方法结束执行时，关闭一个事务
+    -->
+    <aop:config>
+        <aop:pointcut id="studentService_transferAccounts" expression="execution(* com.op.ssm.iocdi.service.StudentServiceImp.transferAccounts(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="studentService_transferAccounts"/>
+    </aop:config>
+
+
+</beans>

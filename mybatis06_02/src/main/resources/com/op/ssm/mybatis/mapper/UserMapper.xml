@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.op.ssm.mybatis.mapper.UserMapper">
+
+<!--    <resultMap id="selectTable01_resultmap" type="user">
+        <id property="user_id" column="user_id"></id>
+        <result property="user_name" column="user_name"></result>
+        <collection property="roleList" ofType="role">
+            <result property="role_name" column="role_name"></result>
+        </collection>
+    </resultMap>
+
+    <select id="selectTable01" parameterType="int" resultMap="selectTable01_resultmap">
+        SELECT `t_user`.`user_id`,`t_user`.`user_name`,`t_role`.`role_name`
+        FROM `t_role`,`t_user`,`t_user_role`
+        WHERE `t_user`.`user_id`=`t_user_role`.`user_id`
+          AND `t_user_role`.`role_id`=`t_role`.`role_id`
+          AND `t_user`.`user_id`=#{value};
+    </select>-->
+
+    <resultMap id="RoleResultMap" type="role">
+        <result property="role_name" column="role_name"></result>
+    </resultMap>
+
+    <resultMap id="selectTable01_resultmap" type="user">
+        <id property="user_id" column="user_id"></id>
+        <result property="user_name" column="user_name"></result>
+        <collection property="roleList" ofType="role" resultMap="RoleResultMap">
+        </collection>
+    </resultMap>
+
+    <select id="selectTable01" parameterType="int" resultMap="selectTable01_resultmap">
+        SELECT `t_user`.`user_id`,`t_user`.`user_name`,`t_role`.`role_name`
+        FROM `t_role`,`t_user`,`t_user_role`
+        WHERE `t_user`.`user_id`=`t_user_role`.`user_id`
+          AND `t_user_role`.`role_id`=`t_role`.`role_id`
+          AND `t_user`.`user_id`=#{value};
+    </select>
+</mapper>

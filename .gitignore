@@ -1,0 +1,26 @@
+# Project exclude paths
+/mybatis04_03/target/
+/mybatis05_01/target/
+/mybatis05_02/target/
+/mybatis06_01/target/
+/mybatis06_02/target/
+/mybatis07_01/target/
+/mybatis07_02/target/
+/spring01_01/target/
+/spring01_02/target/
+/spring02_01/target/
+/spring02_02/target/
+/spring03_01/target/
+/spring03_02/target/
+/spring03_03/target/
+/spring03_04/target/
+/spring03_05/target/
+/spring04_01/target/
+/spring04_02/target/
+/springmvc07_03/target/
+/springmvc07_04/target/
+/springmvc07_05/target/
+/springmvc08/target/
+/springproject01_01/target/
+/springproject01_02/target/
+/springproject01_03/target/
