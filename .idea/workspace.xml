@@ -9,25 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3fc9a70-95a9-4777-99d8-50a099de7095" name="Default Changelist" comment="第san次提交">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvc08/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvc08_01/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvc08/src/main/java/com/op/ssm/handler/Handler01.java" beforeDir="false" afterPath="$PROJECT_DIR$/springmvc08_01/src/main/java/com/op/ssm/handler/Handler01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvc08/src/main/java/com/op/ssm/handler/Handler02.java" beforeDir="false" afterPath="$PROJECT_DIR$/springmvc08_01/src/main/java/com/op/ssm/handler/Handler02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvc08/src/main/java/com/op/ssm/handler/Handler03.java" beforeDir="false" afterPath="$PROJECT_DIR$/springmvc08_01/src/main/java/com/op/ssm/handler/Handler03.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvc08/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvc08_01/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvc08/src/main/resources/springmvc/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvc08_01/src/main/resources/springmvc/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvc08/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvc08_01/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvc08/src/main/webapp/html01.html" beforeDir="false" afterPath="$PROJECT_DIR$/springmvc08_01/src/main/webapp/html01.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvc08/src/main/webapp/jsp01.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springmvc08_01/src/main/webapp/jsp01.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/src/main/java/helloword.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/target/classes/helloword.class" beforeDir="false" />
-    </list>
+    <list default="true" id="b3fc9a70-95a9-4777-99d8-50a099de7095" name="Default Changelist" comment="第四次提交" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,12 +96,12 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/springmvc08" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/springmvc08_01" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.42413792" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -770,6 +752,7 @@
       <workItem from="1657175268457" duration="739000" />
       <workItem from="1657183309607" duration="3525000" />
       <workItem from="1657241253792" duration="144000" />
+      <workItem from="1657241703494" duration="351000" />
     </task>
     <task id="LOCAL-00001" summary="第二次提交">
       <created>1657186321225</created>
@@ -785,7 +768,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657186755285</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="第四次提交">
+      <created>1657241842021</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657241842021</updated>
+    </task>
+    <task id="LOCAL-00004" summary="第四次提交">
+      <created>1657241950262</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657241950262</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -865,7 +862,8 @@
     <MESSAGE value="测试" />
     <MESSAGE value="第二次提交" />
     <MESSAGE value="第san次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="第san次提交" />
+    <MESSAGE value="第四次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第四次提交" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
