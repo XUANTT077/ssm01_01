@@ -20,10 +20,9 @@
         <module name="springmvc07_05" />
         <module name="mybatis04_03" />
         <module name="mybatis06_01" />
-        <module name="untitled" />
+        <module name="springmvc08_01" />
         <module name="spring02_02" />
         <module name="spring02_01" />
-        <module name="springmvc08" />
         <module name="spring03_01" />
         <module name="mybatis05_02" />
         <module name="spring03_02" />
@@ -38,7 +37,7 @@
     <bytecodeTargetLevel>
       <module name="DengLu" target="1.8" />
       <module name="Mybatis04_03" target="8" />
-      <module name="springmvc08_01" target="1.8" />
+      <module name="untitled" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

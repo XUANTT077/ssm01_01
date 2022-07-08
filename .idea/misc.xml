@@ -9,7 +9,6 @@
     <file type="web" url="file://$PROJECT_DIR$/springmvc07_03" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc07_04" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc07_05" />
-    <file type="web" url="file://$PROJECT_DIR$/springmvc08" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc08_01" />
     <file type="web" url="file://$PROJECT_DIR$/springproject01_01" />
     <file type="web" url="file://$PROJECT_DIR$/springproject01_02" />
@@ -36,12 +35,14 @@
         <option value="$PROJECT_DIR$/springmvc07_04/pom.xml" />
         <option value="$PROJECT_DIR$/springmvc07_05/pom.xml" />
         <option value="$PROJECT_DIR$/springmvc08/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc08_01/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/DengLu/pom.xml" />
         <option value="$PROJECT_DIR$/Mybatis04_03/pom.xml" />
+        <option value="$PROJECT_DIR$/untitled/pom.xml" />
       </set>
     </option>
   </component>
