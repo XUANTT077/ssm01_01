@@ -10,10 +10,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>springmvc08</artifactId>
+    <artifactId>springmvc08_01</artifactId>
     <packaging>war</packaging>
 
-    <name>springmvc08</name>
+    <name>springmvc08_01</name>
 
 
     <properties>
@@ -69,7 +69,7 @@
     </dependencies>
 
     <build>
-        <finalName>springmvc08</finalName>
+        <finalName>springmvc08_01</finalName>
 
     </build>
 </project>
