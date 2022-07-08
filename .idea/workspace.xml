@@ -9,7 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3fc9a70-95a9-4777-99d8-50a099de7095" name="Default Changelist" comment="第四次提交" />
+    <list default="true" id="b3fc9a70-95a9-4777-99d8-50a099de7095" name="Default Changelist" comment="第四次提交">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -752,7 +755,7 @@
       <workItem from="1657175268457" duration="739000" />
       <workItem from="1657183309607" duration="3525000" />
       <workItem from="1657241253792" duration="144000" />
-      <workItem from="1657241703494" duration="351000" />
+      <workItem from="1657241703494" duration="857000" />
     </task>
     <task id="LOCAL-00001" summary="第二次提交">
       <created>1657186321225</created>
@@ -782,7 +785,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657241950262</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="第四次提交">
+      <created>1657242062721</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657242062721</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

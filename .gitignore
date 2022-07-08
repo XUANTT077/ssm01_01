@@ -24,3 +24,5 @@
 /springproject01_01/target/
 /springproject01_02/target/
 /springproject01_03/target/
+# Project exclude paths
+/springmvc08_01/target/
