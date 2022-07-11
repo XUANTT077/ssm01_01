@@ -17,7 +17,7 @@
     <mvc:annotation-driven/>
 
     <!--
-     静态资源交给tomat服务器处理，而不是处理器影视器
+     静态资源交给tomat服务器处理，而不是处理器映射器
     -->
     <mvc:default-servlet-handler></mvc:default-servlet-handler>
 
